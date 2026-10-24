@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taller Esmalte — cerámica a mano</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&display=swap">
+<style>
+:root{
+  --bg:#eef1ef; --surface:#ffffff; --ink:#1c2a31; --muted:#56666e;
+  --glaze:#2a45d4; --glaze-ink:#ffffff; --line:#cfd8d4;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10181c; --surface:#18242a; --ink:#e8eeec; --muted:#9db0b6;
+    --glaze:#7f95ff; --glaze-ink:#0d1226; --line:#2a3a41;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10181c; --surface:#18242a; --ink:#e8eeec; --muted:#9db0b6;
+  --glaze:#7f95ff; --glaze-ink:#0d1226; --line:#2a3a41; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.6;font-size:1.0625rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--glaze);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+header strong{font-weight:800;font-size:1.15rem}
+nav{display:flex;gap:1.25rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink);text-decoration:underline}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center;padding:3rem 0 4rem}
+h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1;letter-spacing:-.03em;font-weight:800;margin:0 0 1.25rem}
+.lead{max-width:34rem;color:var(--muted);margin:0 0 1.75rem}
+.btn{display:inline-block;background:var(--glaze);color:var(--glaze-ink);
+  padding:.85rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none}
+.btn:hover{filter:brightness(1.1)}
+.pot{width:100%;max-width:22rem;justify-self:center}
+.pot .body{fill:var(--glaze)}
+.pot .shade{fill:var(--ink);opacity:.18}
+.pot .rim{fill:var(--ink);opacity:.85}
+h2{font-size:1.75rem;letter-spacing:-.02em;margin:0 0 1.5rem}
+.classes{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding-bottom:4rem}
+.classes h2{grid-column:1/-1;margin-bottom:.5rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.5rem}
+.card h3{margin:0 0 .5rem;font-size:1.2rem}
+.card p{margin:0 0 1rem;color:var(--muted)}
+.card .price{font-weight:700}
+.about{border-top:1px solid var(--line);padding:3rem 0 4rem;max-width:44rem}
+.about p{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 2rem;color:var(--muted);font-size:.95rem}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:1.5rem}
+  .classes{grid-template-columns:1fr}
+  nav{gap:.9rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <strong>Taller Esmalte</strong>
+    <nav>
+      <a href="#clases">Clases</a>
+      <a href="#taller">El taller</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Aprende a hacer tu propia taza.</h1>
+        <p class="lead">Clases de cerámica para principiantes, en grupos de seis personas. Moldeas, esmaltas y te llevas la pieza horneada a casa.</p>
+        <a class="btn" href="#clases">Ver clases</a>
+      </div>
+      <svg class="pot" viewBox="0 0 240 260" role="img" aria-label="Ilustración de una vasija azul">
+        <ellipse class="shade" cx="120" cy="240" rx="80" ry="12"/>
+        <path class="body" d="M70 60 C20 110 30 200 80 232 L160 232 C210 200 220 110 170 60 Z"/>
+        <path class="shade" d="M150 66 C190 120 190 200 150 232 L160 232 C210 200 220 110 170 60 Z"/>
+        <ellipse class="rim" cx="120" cy="58" rx="52" ry="12"/>
+        <ellipse class="body" cx="120" cy="58" rx="42" ry="8"/>
+      </svg>
+    </section>
+
+    <section class="classes" id="clases">
+      <h2>Clases</h2>
+      <article class="card">
+        <h3>Primera pieza</h3>
+        <p>Una tarde para modelar a mano una taza o un plato pequeño. No necesitas experiencia.</p>
+        <span class="price">$450 MXN · 3 horas</span>
+      </article>
+      <article class="card">
+        <h3>Torno para principiantes</h3>
+        <p>Cuatro sesiones para centrar el barro y levantar cilindros en el torno.</p>
+        <span class="price">$1,800 MXN · 4 sesiones</span>
+      </article>
+      <article class="card">
+        <h3>Esmaltado</h3>
+        <p>Trae tus piezas secas y aprende a aplicar esmaltes y a leer el horneado.</p>
+        <span class="price">$350 MXN · 2 horas</span>
+      </article>
+    </section>
+
+    <section class="about" id="taller">
+      <h2>El taller</h2>
+      <p>Somos un taller pequeño con dos tornos eléctricos, un horno y una mesa larga donde cabe todo el grupo. Las piezas se hornean en la semana siguiente a la clase y te avisamos cuando estén listas.</p>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    Escríbenos a hola@talleresmalte.example para reservar tu lugar. Abierto de martes a sábado.
+  </footer>
+</div>
+</body>
+</html>
